@@ -1,0 +1,39 @@
+﻿@model GenerateSPScript.Models.clsSchemaScriptViewModel
+@using System.Data;
+@{
+    ViewBag.Title = "GetSPSchema";
+}
+
+<h2>GetSPSchema</h2>
+
+<div>
+    @*<table class="table-responsive">
+        @if (Model != null && Model.tblData.Rows.Count > 0)
+        {
+            DataTable objData = Model.tblData;
+            <tr>
+                @foreach (DataColumn column in objData.Columns)
+                {
+                    <th>@column.ColumnName</th>
+                }
+            </tr>
+
+            foreach (DataRow rowItem in objData.Rows)
+            {
+                <tr>
+                    @foreach (DataColumn column in objData.Columns)
+                    {
+                        <td>@rowItem[column.ColumnName]</td>
+                    }
+                </tr>
+            }
+        }
+    </table>*@
+
+    <div>
+        @Html.Raw(Model.strSPText)
+    </div>
+
+
+</div>
+
